@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="140dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    android:elevation="3dp"
+    android:backgroundTint="@color/white"
+    android:id="@+id/del_det_btn">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/del_prod_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/jaya_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/del_prod_name"
+                android:layout_width="130dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Name"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autoSize_text_sizes"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/del_prod_img" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/del_prod_tamil"
+                android:layout_width="130dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Name"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autoSize_text_sizes"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/del_prod_name"
+                app:layout_constraintTop_toBottomOf="@+id/del_prod_name" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/del_prod_tamil" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/del_prod_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Name"
+                android:textAllCaps="true"
+                android:textColor="@color/green_500"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/del_prod_tamil"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/del_prod_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textAllCaps="true"
+                android:textColor="@color/green_500"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/del_prod_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toEndOf="@+id/del_prod_size"
+                app:layout_constraintTop_toTopOf="@+id/del_prod_size" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

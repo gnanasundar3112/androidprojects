@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Receipt">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/receiptappbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="5dp">
+                <TextView
+                    android:id="@+id/rece_cust_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"
+                    android:hint="Select Customer"
+                    android:textColorHint="@color/black"
+                    android:background="@drawable/select_outline_box"
+                    android:drawableEnd="@drawable/arrow_down"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rece_loan_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:hint="Select loan no"
+                    android:background="@drawable/select_outline_box"
+                    android:drawableEnd="@drawable/arrow_down"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="vertical">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:stretchColumns="1,2,3,4">
+
+                    <TableRow android:background="@color/pink"
+                        android:id="@+id/table_bg_color">
+
+                        <TextView
+                            android:width="100dp"
+                            android:gravity="start"
+                            android:padding="10dp"
+                            android:text="Date"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:width="150dp"
+                            android:gravity="end"
+                            android:padding="10dp"
+                            android:text="Interest Amount"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:width="60dp"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Edit"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:width="80dp"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Delete"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="60dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/receipt_recyclerView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            tools:listitem="@layout/item_receipt"/>
+                    </ScrollView>
+                </TableLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

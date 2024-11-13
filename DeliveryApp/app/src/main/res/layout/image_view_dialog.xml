@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:id="@+id/view_img_dialog">
+
+    <ImageButton
+        android:id="@+id/dialog_pro_cancel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/cancel"
+        android:backgroundTint="@color/white"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dropdown_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:textSize="20sp"
+        android:text="Profile Image"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/outline_box"
+        android:padding="5dp">
+       <ImageView
+           android:id="@+id/dialog_pro_img"
+           android:layout_width="match_parent"
+           android:layout_height="300dp"
+           android:background="@color/white"
+           android:src="@drawable/jaya_logo"/>
+    </LinearLayout>
+</LinearLayout>

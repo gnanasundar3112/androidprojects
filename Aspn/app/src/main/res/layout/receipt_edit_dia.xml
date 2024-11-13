@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginHorizontal="20dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/dialog_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/close"
+        android:layout_gravity="end"/>
+    <TextView
+        android:id="@+id/dialog_bill_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill no : AR000001"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/dialog_bill_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Bill Date : 28-04-2024"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/dialog_bill_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Bill Amount : Rs.10000 "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Amount :-"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/chart6"/>
+    <EditText
+        android:id="@+id/dialog_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Amount"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:drawable/editbox_background"/>
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/dialog_update_btn"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColor="@color/white"
+       android:text="Update"
+       android:backgroundTint="@color/green"
+       android:layout_marginTop="15dp"/>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/mwo">
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home"
+            android:title="Home"/>
+        <item android:id="@+id/nav_profile"
+            android:icon="@drawable/person_img"
+            android:title="Profile"/>
+        <item android:id="@+id/nav_address"
+            android:icon="@drawable/baseline_location"
+            android:title="Address"/>
+        <item android:id="@+id/nav_myorders"
+            android:icon="@drawable/baseline_drive"
+            android:title="My Orders"/>
+    </group>
+    <group android:id="@+id/hpa">
+        <item android:id="@+id/nav_help"
+            android:icon="@drawable/local_phone"
+            android:title="Help"/>
+        <item android:id="@+id/nav_refer_friends"
+            android:icon="@drawable/baseline_share"
+            android:title="Refer Friends"/>
+    </group>
+    <group android:id="@+id/rrl">
+
+        <item android:id="@+id/nav_logout"
+            android:icon="@drawable/baseline_logout"
+            android:title="Logout"/>
+    </group>
+</menu>

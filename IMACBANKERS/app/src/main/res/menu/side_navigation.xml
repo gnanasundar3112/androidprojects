@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:id="@+id/hpa">
+        <item android:id="@+id/nav_cate_master"
+            android:icon="@drawable/category"
+            android:title="Category Master"/>
+
+        <item android:id="@+id/nav_prod_master"
+            android:icon="@drawable/product"
+            android:title="Product Master"/>
+
+        <item android:id="@+id/nav_grad_master"
+            android:icon="@drawable/grade"
+            android:title="Grade Master"/>
+
+        <item android:id="@+id/nav_grade_rate"
+            android:icon="@drawable/goldprice"
+            android:title="Grade Rate"/>
+
+        <item android:id="@+id/nav_part_master"
+            android:icon="@drawable/partymaster"
+            android:title="Party Master"/>
+
+    </group>
+
+    <group android:id="@+id/hp">
+        <item android:id="@+id/nav_loan"
+            android:icon="@drawable/loan"
+            android:title="Loan Entry"/>
+
+        <item android:id="@+id/nav_receipt"
+            android:icon="@drawable/receipt"
+            android:title="Receipt Entry"/>
+    </group>
+
+    <group android:id="@+id/ha">
+        <item android:id="@+id/nav_reports"
+            android:icon="@drawable/report"
+            android:title="Reports"/>
+    </group>
+
+    <group android:id="@+id/rrl">
+        <item android:id="@+id/nav_setting"
+            android:icon="@drawable/settings"
+            android:title="Settings"/>
+        <item android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout"/>
+    </group>
+
+</menu>

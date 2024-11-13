@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:id="@+id/main_det_btn"
+    android:background="@drawable/border"
+    android:padding="10dp"
+    android:layout_margin="5dp">
+
+
+    <ImageView
+        android:id="@+id/main_prod_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:src="@drawable/vinsoft_logo" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_prod_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coca-cola"
+            android:textColor="@color/blue_500"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_prod_tamil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="வெங்காயம்"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_prod_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50g"
+            android:textColor="@color/green_light"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="5dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_prod_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="99"
+            android:textColor="@color/green_light"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+
+

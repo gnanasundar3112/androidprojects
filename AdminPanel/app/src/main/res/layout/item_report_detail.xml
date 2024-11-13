@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:stretchColumns="1,2,3,4,5,6"
+            tools:context=".FuelSavePage">
+
+            <TableRow android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/report_prod_name"
+                    android:width="200dp"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="Product Name"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/report_weight"
+                    android:width="100dp"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="Weight"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/report_detail_rate"
+                    android:width="100dp"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Rate"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/report_detail_qty"
+                    android:width="100dp"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Qty"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/report_detail_amount"
+                    android:width="100dp"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Amount"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+        </TableLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

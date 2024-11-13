@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Admin Panel</string>
+    <string name="open_nave">open Navigation drawer</string>
+    <string name="close_nave">close Navigation drawer</string>
+
+    <string-array name="Active">
+        <item>Enable</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="Status">
+        <item>All</item>
+        <item>Ordered</item>
+        <item>Delivered</item>
+        <item>Cancel</item>
+    </string-array>
+</resources>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="80dp"
+                   android:orientation="horizontal"
+                   android:background="@drawable/design_gradient"
+                   android:padding="5dp">
+
+                   <ImageView
+                       android:id="@+id/iv_burgerIcon"
+                       android:layout_width="35dp"
+                       android:layout_height="35dp"
+                       android:layout_gravity="center"
+                       android:layout_marginStart="15dp"
+                       app:tint="@color/white"
+                       app:srcCompat="@drawable/baseline_list" />
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_weight="1"
+                       android:gravity="center"
+                       android:text="Jaya Grocery"
+                       android:textColor="@color/backgroungColor"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+                   <de.hdodenhof.circleimageview.CircleImageView
+                       android:layout_width="40dp"
+                       android:layout_height="40dp"
+                       android:layout_gravity="center"
+                       android:layout_marginEnd="10dp"
+                       android:src="@drawable/jaya_logo"/>
+               </LinearLayout>
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/searchView"
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:maxHeight="50dp"
+                   android:paddingLeft="10dp"
+                   android:drawableLeft="@drawable/baseline_search"
+                   android:drawableTint="@color/black"
+                   android:drawablePadding="10dp"
+                   android:hint="Search..."
+                   android:background="@drawable/round_back"
+                   android:textColor="@color/black"
+                   android:imeOptions="actionNext"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginEnd="15dp"
+                   android:layout_marginStart="15dp"
+                   android:textColorHint="@color/black"/>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_marginTop="8dp"
+                   android:background="@color/black"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/main_user_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Offers"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:visibility="gone"/>
+                        <ProgressBar
+                            android:id="@+id/ProgressBar"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:indeterminateTint="@color/red"
+                            android:visibility="gone"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_offer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Categories"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Products"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"/>
+                        <ProgressBar
+                            android:id="@+id/prodp_progressBar"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:indeterminateTint="@color/red"
+                            android:visibility="gone"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_product"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+           </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="40dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/add_cart"
+            app:backgroundTint="@color/yellow"
+            app:tint="@color/white"
+            android:outlineSpotShadowColor="@color/white"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cartCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="0"
+            android:textColor="@color/smoke_red"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

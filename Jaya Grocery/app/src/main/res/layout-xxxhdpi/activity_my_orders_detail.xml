@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".My_Orders_Detail"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/ORDER_DETAIL_NO"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/button_background_color"
+                            android:textSize="13sp"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ORDER_DETAIL_DATE"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/button_background_color"
+                            android:textSize="13sp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Products"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold" />
+                    <ProgressBar
+                        android:id="@+id/progressbar_cancel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/red"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/cancel_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginVertical="10dp"
+                        android:padding="5dp"
+                        android:layout_marginHorizontal="5dp"
+
+                        android:background="@drawable/outline_box2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="14sp"
+                                android:text="PRICE DETAILS"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:text="Item total price"
+                                android:textColor="@color/text"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/order_prod_item_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="0.0"
+                                android:textSize="13sp"
+                                android:textColor="@color/text"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:text="Rounded off"
+                                android:textColor="@color/text"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/order_round_off"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="0.0"
+                                android:textSize="13sp"
+                                android:textColor="@color/text"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:padding="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Shipping fee"
+                                android:textColor="@color/text"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/order_shipping_fee"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="0.0"
+                                android:textSize="13sp"
+                                android:textColor="@color/text"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:padding="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Total Amount"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="14sp"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/order_total_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="0.0"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/black" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:background="@color/white"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/circle_img1"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/circle_icon"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/agendacolor"/>
+
+                        <ImageView
+                            android:id="@+id/circle_img2"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="50dp"
+                            android:src="@drawable/circle_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/circle_img1"
+                            app:layout_constraintTop_toBottomOf="@+id/circle_img1"
+                            app:tint="@color/agendacolor" />
+
+                        <ProgressBar
+                            android:id="@+id/VERTICAL_PROGRESS"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="77dp"
+                            android:layout_height="3dp"
+                            android:progress="100"
+                            android:progressTint="@color/agendacolor"
+                            android:rotation="90"
+                            android:indeterminateTint="@color/green"
+                            app:layout_constraintBottom_toTopOf="@+id/circle_img2"
+                            app:layout_constraintEnd_toEndOf="@+id/circle_img1"
+                            app:layout_constraintStart_toStartOf="@+id/circle_img1"
+                            app:layout_constraintTop_toBottomOf="@+id/circle_img1"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:layout_marginStart="8dp"
+                            android:text="Ordered"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/circle_img1"
+                            app:layout_constraintStart_toEndOf="@+id/circle_img1"
+                            app:layout_constraintTop_toTopOf="@+id/circle_img1"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/ORDER_DATE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:text="26/06/2023"
+                            android:textAllCaps="true"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/button_background_color"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/materialTextView3"
+                            app:layout_constraintTop_toTopOf="@+id/materialTextView3" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:text="Oreder has been placed"
+                            android:textColor="@color/button_background_color"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/deli_status"
+                            app:layout_constraintTop_toBottomOf="@+id/materialTextView3" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/deli_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:layout_marginStart="8dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/circle_img2"
+                            app:layout_constraintStart_toEndOf="@+id/circle_img2"
+                            app:layout_constraintTop_toTopOf="@+id/circle_img2" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/deli_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/button_background_color"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/deli_status"
+                            app:layout_constraintTop_toTopOf="@+id/deli_status" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/order_has_been"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:textColor="@color/button_background_color"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/deli_status"
+                            app:layout_constraintTop_toBottomOf="@+id/deli_status" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/black" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Returns Days"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Timing  :"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:layout_marginEnd="10dp"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/return_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00:00:00"
+                                android:textColor="@color/red"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/black"
+                        android:visibility="gone"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/ratings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:stepSize="1"
+                            android:isIndicator="true"
+                            android:visibility="gone"
+                            android:theme="@style/RatingBar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:layout_marginTop="50dp"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/need_help"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/color_savory"
+                            android:text="Need Help?"
+                            android:textColor="@color/white"
+                            app:cornerRadius="5dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/cancel_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/red"
+                            android:text="Cancel order"
+                            app:cornerRadius="5dp"
+                            android:textColor="@color/white"
+                            android:visibility="gone"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/return_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/red"
+                            android:text="Return?"
+                            app:cornerRadius="5dp"
+                            android:textColor="@color/white"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

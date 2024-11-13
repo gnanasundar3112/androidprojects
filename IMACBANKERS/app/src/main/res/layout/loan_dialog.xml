@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/loan_dialog"
+    android:background="@color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/white">
+
+            <TextView
+                android:id="@+id/loan_title"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="3dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/design_gradient"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:text="title"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/name_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Product Name"
+                            android:layout_marginVertical="5dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/loan_dia_prod_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="2dp"
+                            android:padding="12dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:hint="Select Product Name"
+                            android:background="@drawable/select_outline_box"
+                            android:drawableEnd="@drawable/arrow_down"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/name_lbel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Grade Name"
+                            android:layout_marginVertical="5dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/loan_dia_grade_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="2dp"
+                            android:padding="12dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:hint="Select Grade Name"
+                            android:background="@drawable/select_outline_box"
+                            android:drawableEnd="@drawable/arrow_down"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="5dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="2dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rate"
+                                android:layout_marginVertical="5dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dia_rate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="12dp"
+                                android:maxLines="1"
+                                android:textSize="16sp"
+                                android:enabled="true"
+                                android:textColor="@color/black"
+                                android:background="@drawable/outline_box"
+                                android:textColorHint="@color/black"
+                                android:textIsSelectable="true"
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:imeOptions="actionNext"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="2dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Qty"
+                                android:layout_marginVertical="5dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dia_qty"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="12dp"
+                                android:maxLines="1"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:background="@drawable/outline_box"
+                                android:textColorHint="@color/black"
+                                android:textIsSelectable="true"
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:imeOptions="actionNext"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="5dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="2dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Weight"
+                                android:layout_marginVertical="5dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dia_weight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="12dp"
+                                android:maxLines="1"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:background="@drawable/outline_box"
+                                android:textColorHint="@color/black"
+                                android:textIsSelectable="true"
+                                android:inputType="number"
+                                android:digits="1234567890."
+                                android:maxLength="12"
+                                android:imeOptions="actionNext"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="2dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Waste Weight"
+                                android:layout_marginVertical="5dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dia_wast_weight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="12dp"
+                                android:maxLines="1"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:background="@drawable/outline_box"
+                                android:textColorHint="@color/black"
+                                android:textIsSelectable="true"
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:digits="1234567890."
+                                android:imeOptions="actionNext"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="5dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="2dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Net Weight"
+                                android:layout_marginVertical="5dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dia_net_weight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="12dp"
+                                android:maxLines="1"
+                                android:textSize="16sp"
+                                android:enabled="false"
+                                android:textColor="@color/black"
+                                android:background="@drawable/disable_outline_box"
+                                android:textColorHint="@color/black"
+                                android:textIsSelectable="true"
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:digits="1234567890."
+                                android:imeOptions="actionNext"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="2dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Amount"
+                                android:layout_marginVertical="5dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dia_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="12dp"
+                                android:maxLines="1"
+                                android:textSize="16sp"
+                                android:enabled="false"
+                                android:textColor="@color/black"
+                                android:background="@drawable/disable_outline_box"
+                                android:textColorHint="@color/black"
+                                android:textIsSelectable="true"
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:digits="1234567890."
+                                android:imeOptions="actionNext"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="top"
+                        android:gravity="top"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/dialog_loan_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/borderColor"
+                            android:textColor="@color/red"
+                            android:text="Cancel"
+                            app:cornerRadius="5dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/dialog_loan_save"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/borderColor"
+                            android:textColor="@color/green"
+                            android:text="Save"
+                            app:cornerRadius="5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Jaya Grocery</string>
+
+    <string-array name="Active">
+        <item>Cash On Delivery</item>
+    </string-array>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
