@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/nav_cash"
+            android:icon="@drawable/cash"
+            android:title="Cash"/>
+        <item android:id="@+id/nav_bank"
+            android:icon="@drawable/bank"
+            android:title="Bank"/>
+        <item android:id="@+id/nav_purchase"
+            android:icon="@drawable/purchase"
+            android:title="Purchase"/>
+        <item android:id="@+id/nav_sales"
+            android:icon="@drawable/sale"
+            android:title="Sales"/>
+        <item android:id="@+id/nav_receipt"
+            android:icon="@drawable/receipt"
+            android:title="Receipt"/>
+        <item android:id="@+id/nav_payment"
+            android:icon="@drawable/payment"
+            android:title="Payment"/>
+        <item android:id="@+id/nav_outstanding"
+            android:icon="@drawable/outstanding"
+            android:title="Outstanding"/>
+        <item android:id="@+id/nav_ledger"
+            android:icon="@drawable/ledger"
+            android:title="Ledger"/>
+    </group>
+
+    <group android:id="@+id/reports">
+        <item android:id="@+id/nav_logout"
+            android:icon="@drawable/baseline_logout"
+            android:title="Logout"/>
+    </group>
+</menu>

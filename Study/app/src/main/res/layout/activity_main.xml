@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbar_home" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="5dp"
+                android:drawableTint="@color/blue_500"
+                android:drawableStart="@drawable/instruction_icon"
+                android:drawablePadding="10dp"
+                android:text="Online Assessment Instructions"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="Read all instructions carefully before starting the test."
+                    android:textColor="@color/Tex"
+                    android:drawableStart="@drawable/check"
+                    android:drawableTint="@color/green"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="Ensure a stable internet connection throughout the exam."
+                    android:textColor="@color/Tex"
+                    android:drawableStart="@drawable/wifi"
+                    android:drawableTint="@color/green"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="13dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="Do not refresh or close the browser during the test."
+                    android:textColor="@color/Tex"
+                    android:drawableStart="@drawable/refresh"
+                    android:drawableTint="@color/red"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="13dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="Use only approved devices to take the assessment."
+                    android:textColor="@color/Tex"
+                    android:drawableStart="@drawable/devices"
+                    android:drawableTint="@color/green"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="13dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="Avoid switching to other applications or browser tabs."
+                    android:textColor="@color/Tex"
+                    android:drawableStart="@drawable/block"
+                    android:drawableTint="@color/red"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="13dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="The test is timed, and the timer cannot be paused."
+                    android:textColor="@color/Tex"
+                    android:drawableStart="@drawable/timer"
+                    android:drawableTint="@color/yellow"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="13dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="By proceeding, you agree to the test's terms and conditions."
+                    android:textColor="@color/Tex"
+                    android:drawableStart="@drawable/terms"
+                    android:drawableTint="@color/green"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/start_test"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:lottie_rawRes="@raw/start_btn"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

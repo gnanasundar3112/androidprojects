@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.VinsoftSolution" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/appColor</item>
+        <item name="colorOnPrimary">@color/appColor</item>
+        <!-- Secondary brand color. -->
+        <item name="colorOnSecondary">@color/appColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/appColor</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

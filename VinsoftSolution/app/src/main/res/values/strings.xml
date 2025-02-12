@@ -1,0 +1,16 @@
+<resources>
+    <!--App Name-->
+    <string name="app_name">Vinsoft Solution</string>
+
+    <!--Activity Names-->
+    <string name="cash">Cash</string>
+    <string name="bank">Bank</string>
+    <string name="purchase">Purchase</string>
+    <string name="sales">Sales</string>
+    <string name="receipt">Receipt</string>
+    <string name="payment">Payment</string>
+    <string name="outstanding">Outstanding</string>
+    <string name="ledger">Ledger</string>
+
+
+</resources>

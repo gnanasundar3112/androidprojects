@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1,2">
+
+        <TableRow
+            android:background="@color/backgroungColor">
+
+            <TextView
+                android:id="@+id/type"
+                android:width="150dp"
+                android:text="credit"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:gravity="start"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/amount"
+                android:width="120dp"
+                android:text="₹ 10000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:gravity="end"
+                android:textColor="@color/black"/>
+
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

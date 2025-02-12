@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    app:cardElevation="3dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="@drawable/design_gradient">
+        <ImageButton
+            android:id="@+id/burgerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginVertical="3dp"
+            app:borderWidth="0dp"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:fabSize="normal"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/list_icon"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_appbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vinsoft Solutions"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/vinsoft_logo"
+            android:layout_marginEnd="25dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!-- Base application theme. -->
+<style name="Theme.JA" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/appbar</item>
+    <item name="colorOnPrimary">@color/appbar</item>
+    <!-- Secondary brand color. -->
+    <item name="colorOnSecondary">@color/appbar</item>
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor">@color/appbar</item>
+    <!-- Customize your theme here. -->
+</style>
+</resources>

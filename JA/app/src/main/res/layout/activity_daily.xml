@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailyActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="5dp"
+            android:orientation="vertical">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:stretchColumns="1,2,3,4">
+
+                        <TableRow
+                            android:id="@+id/table_bg_color"
+                            android:background="@color/appbar">
+
+                            <TextView
+                                android:width="90dp"
+                                android:gravity="start"
+                                android:padding="10dp"
+                                android:text="Date"
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:width="80dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Qty"
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:width="100dp"
+                                android:gravity="end"
+                                android:padding="10dp"
+                                android:text="Amount"
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:width="100dp"
+                                android:gravity="end"
+                                android:padding="10dp"
+                                android:text="Received"
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/daily_recyclerView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    tools:listitem="@layout/item_daily_detail" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginBottom="60dp">
+                                    <TableLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:stretchColumns="1,2,3,4">
+
+                                        <TableRow
+                                            android:id="@+id/table_row"
+                                            android:background="@color/table_foot">
+
+                                            <TextView
+                                                android:width="90dp"
+                                                android:gravity="start"
+                                                android:padding="10dp"
+                                                android:textColor="@color/black"
+                                                android:textSize="12dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/tol_qty"
+                                                android:width="80dp"
+                                                android:gravity="center"
+                                                android:padding="10dp"
+                                                android:text="0"
+                                                android:textColor="@color/black"
+                                                android:textSize="12dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/tol_amt"
+                                                android:width="100dp"
+                                                android:gravity="end"
+                                                android:padding="10dp"
+                                                android:text="0.0"
+                                                android:textColor="@color/black"
+                                                android:textSize="12dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/tol_received"
+                                                android:width="100dp"
+                                                android:gravity="end"
+                                                android:padding="10dp"
+                                                android:text="0.0"
+                                                android:textColor="@color/black"
+                                                android:textSize="12dp"
+                                                android:textStyle="bold" />
+
+                                        </TableRow>
+
+                                    </TableLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </ScrollView>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:background="@color/appbar"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:padding="10dp"
+                android:text="Balance   : "
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tol_bal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:padding="10dp"
+                android:text="0.0"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

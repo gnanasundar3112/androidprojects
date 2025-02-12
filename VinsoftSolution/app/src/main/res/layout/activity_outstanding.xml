@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Outstanding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/appbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/from_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/outline_box"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:hint="Select From Date"
+                    android:padding="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    android:layout_marginHorizontal="2dp"/>
+                <TextView
+                    android:id="@+id/to_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/outline_box"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:hint="Select To Date"
+                    android:padding="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    android:layout_marginHorizontal="2dp"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/process"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="@color/green_500"
+                android:text="Process"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="3dp">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".FuelSavePage"
+                    android:stretchColumns="1,2,3"
+                    android:layout_margin="8dp">
+
+                    <TableRow
+                        android:background="@color/appColor">
+
+                        <TextView
+                            android:width="100dp"
+                            android:text="Type"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:gravity="start"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:width="150dp"
+                            android:text="Name"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:gravity="start"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:width="120dp"
+                            android:text="Amount"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:gravity="end"
+                            android:textColor="@color/white"/>
+
+                    </TableRow>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/outstanding_recycler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/item_detailes">
+                    </androidx.recyclerview.widget.RecyclerView>
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appColor"
+            android:orientation="horizontal"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Total :"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/out_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/outline_box"
+                android:padding="10dp"
+                android:text="0.00"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

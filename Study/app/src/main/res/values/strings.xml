@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Spisindia</string>
+    <string name="dashboard_head">Online Assessment</string>
+
+    <string-array name="year_of_pass">
+        <item>2023-2024</item>
+        <item>2024-2025</item>
+    </string-array>
+</resources>

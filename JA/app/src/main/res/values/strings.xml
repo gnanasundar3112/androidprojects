@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">JA Water</string>
+
+    <string-array name="active">
+        <item>ENABLE</item>
+        <item>DISABLE</item>
+    </string-array>
+
+    <string-array name="payment">
+        <item>CASH</item>
+        <item>GPAY</item>
+        <item>PAYTM</item>
+        <item>ACCOUNT</item>
+    </string-array>
+</resources>
